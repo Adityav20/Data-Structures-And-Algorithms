@@ -5,5 +5,6 @@ class Solution:
         for i in range(len(arr)-1):
             if arr[i+1] - arr[i] == diff:
                 continue
-            else: return False
+            else: 
+                return False
         return True
