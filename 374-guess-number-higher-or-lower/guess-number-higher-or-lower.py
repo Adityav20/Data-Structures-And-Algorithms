@@ -18,6 +18,4 @@ class Solution:
             elif g < 0:
                 high = mid - 1
             else:
-                low = mid + 1
-        #return None
-        
+                low = mid + 1   
