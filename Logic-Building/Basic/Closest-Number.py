@@ -14,7 +14,7 @@ if m > 0:
         ans = n - (n % m)
         if abs(ans + m - n) <= abs(ans - n):
             ans += m
-            # Still abs max is not solved
+            # abs max is not solved
 
     """for i in range(n-m,n+m+1):
         if i%m == 0: 
