@@ -11,14 +11,9 @@ if m > 0:
     if n % m == 0:
         ans = n
     else:
-        ans = n - (n % m)
-        if abs(ans + m - n) <= abs(ans - n):
-            ans += m
-            # abs max is not solved
-
-    """for i in range(n-m,n+m+1):
-        if i%m == 0: 
-            ans = i
-            break"""
+        if abs(n - (n // m) * m) <= abs(n - ((n // m) + 1) * m):
+            ans = (n // m) * m
+        else:
+            ans = ((n // m) + 1) * m
     
     print(ans)
