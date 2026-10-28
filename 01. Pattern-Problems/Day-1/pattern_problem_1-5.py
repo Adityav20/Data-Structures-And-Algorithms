@@ -9,7 +9,7 @@ n = int(input("Enter number of rows: "))
 # ****
 # ****
 def pattern01(n):
-    for i in range(n):
+    for i in range(1, n+1):
         for j in range(n):
             print('*', end = '')
         print()
@@ -23,7 +23,7 @@ def pattern01(n):
 # ****
 # *****
 def pattern02(n):
-    for i in range(n+1):
+    for i in range(1, n+1):
         for j in range(i):
             print('*', end = '')
         print()
@@ -37,8 +37,8 @@ def pattern02(n):
 # **
 # *
 def pattern03(n):
-    for i in range(n):
-        for j in range(n-i,0,-1):
+    for i in range(1, n+1):
+        for j in range(n-i+1,0,-1):
             print('*', end = '')
         print()
 
@@ -51,7 +51,7 @@ def pattern03(n):
 # 1234
 # 12345
 def pattern04(n):
-    for i in range(n+1):
+    for i in range(1, n+1):
         for j in range(1,i+1):
             print(j, end = '')
         print()
@@ -71,13 +71,30 @@ def pattern05(n):
         print()
 
 
+# Problem 6: Function to print a right-aligned triangle
+# Example for num = 5:
+#     *
+#    **
+#   ***
+#  ****
+# *****
+def pattern06(n):
+    k = n
+    for i in range(1,n+1):
+        print(' ' * (i+k-2), end = '')
+        for j in range(i):
+            print('*', end = '')
+        print()
+        k-=2
+
 
 patterns = {
     1: pattern01,
     2: pattern02,
     3: pattern03,
     4: pattern04,
-    5: pattern05
+    5: pattern05,
+    6: pattern06
 }
 
 # Execute selected pattern
