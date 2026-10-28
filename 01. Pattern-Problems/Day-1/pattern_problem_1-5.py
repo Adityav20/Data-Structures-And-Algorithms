@@ -88,13 +88,29 @@ def pattern06(n):
         k-=2
 
 
+# Problem 7: Function to print an inverted right-aligned triangle
+# Example for num = 5:
+# *****
+#  ****
+#   ***
+#    **
+#     *
+def pattern07(n):
+    for i in range(1, n+1):
+        print(' ' * i, end = '')
+        for j in range(n-i+1,0,-1):
+            print('*', end = '')
+        print()
+
+
 patterns = {
     1: pattern01,
     2: pattern02,
     3: pattern03,
     4: pattern04,
     5: pattern05,
-    6: pattern06
+    6: pattern06,
+    7: pattern07
 }
 
 # Execute selected pattern
