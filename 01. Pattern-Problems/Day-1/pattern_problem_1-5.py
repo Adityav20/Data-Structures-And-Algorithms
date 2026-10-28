@@ -43,10 +43,26 @@ def pattern03(n):
         print()
 
 
+# Problem 4: Function to print an increasing number triangle
+# Example for num = 5:
+# 1
+# 12
+# 123
+# 1234
+# 12345
+def pattern04(n):
+    for i in range(n+1):
+        for j in range(1,i+1):
+            print(j, end = '')
+        print()
+
+
+
 patterns = {
     1: pattern01,
     2: pattern02,
-    3: pattern03
+    3: pattern03,
+    4: pattern04
 }
 
 # Execute selected pattern
