@@ -103,6 +103,24 @@ def pattern07(n):
         print()
 
 
+# Problem 8: Function to print a pyramid pattern
+# Example for num = 5:
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+def pattern08(n):
+    k = n
+    for i in range(1, n+1):
+        print(' ' * (i+k-2), end = '')
+        print('*' * (i-1), end = '')
+        for j in range(i):
+            print('*', end = '')
+        print()
+        k-=2
+
+
 patterns = {
     1: pattern01,
     2: pattern02,
@@ -110,7 +128,8 @@ patterns = {
     4: pattern04,
     5: pattern05,
     6: pattern06,
-    7: pattern07
+    7: pattern07,
+    8: pattern08
 }
 
 # Execute selected pattern
