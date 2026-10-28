@@ -14,6 +14,7 @@ def pattern01(n):
             print('*', end = '')
         print()
 
+
 # Problem 2: Function to print a right-angled triangle
 # Example for num = 5:
 # *
@@ -27,9 +28,25 @@ def pattern02(n):
             print('*', end = '')
         print()
 
+
+# Problem 3: Function to print an inverted right-angled triangle
+# Example for num = 5:
+# *****
+# ****
+# ***
+# **
+# *
+def pattern03(n):
+    for i in range(n):
+        for j in range(n-i,0,-1):
+            print('*', end = '')
+        print()
+
+
 patterns = {
     1: pattern01,
-    2: pattern02
+    2: pattern02,
+    3: pattern03
 }
 
 # Execute selected pattern
