@@ -57,12 +57,27 @@ def pattern04(n):
         print()
 
 
+# Problem 5: Function to print a repeated number triangle
+# Example for num = 5:
+# 1
+# 22
+# 333
+# 4444
+# 55555
+def pattern05(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print(i, end = '')
+        print()
+
+
 
 patterns = {
     1: pattern01,
     2: pattern02,
     3: pattern03,
-    4: pattern04
+    4: pattern04,
+    5: pattern05
 }
 
 # Execute selected pattern
