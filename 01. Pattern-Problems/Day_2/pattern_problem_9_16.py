@@ -73,11 +73,26 @@ def pattern12(n):
         print()
 
 
+# Problem 13: Function to print a binary triangle
+# Example for num = 5:
+# 1
+# 01
+# 101
+# 0101
+# 10101
+def pattern13(n):
+    for i in range(1, n+1):
+        for j in range(1,i+1):
+            print((i+j+1) % 2, end = '')
+        print()
+
+
 patterns = {
     9: pattern09,
     10: pattern10,
     11: pattern11,
-    12: pattern12
+    12: pattern12,
+    13: pattern13
 }
 
 # Execute selected pattern
