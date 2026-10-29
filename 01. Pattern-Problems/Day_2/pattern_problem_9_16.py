@@ -87,12 +87,35 @@ def pattern13(n):
         print()
 
 
+# Problem 14: Function to print a palindromic number pyramid
+# Example for num = 5:
+#     1
+#    121
+#   12321
+#  1234321
+# 123454321
+def pattern14(n):
+    k = n
+    t = 0
+    for i in range(1, n+1):
+        print(' ' * (i+k-2), end = '')
+        for j in range(1,i+1):
+            print(j, end = '')
+            t+=1
+        for l in range(t-1,0,-1):
+            print(l, end= '')
+        print()
+        k-=2
+        t = 0
+
+
 patterns = {
     9: pattern09,
     10: pattern10,
     11: pattern11,
     12: pattern12,
-    13: pattern13
+    13: pattern13,
+    14: pattern14
 }
 
 # Execute selected pattern
