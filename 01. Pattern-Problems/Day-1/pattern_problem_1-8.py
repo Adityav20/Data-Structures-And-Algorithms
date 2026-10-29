@@ -1,5 +1,5 @@
 #A desired pattern number from USER
-p = int(input("Enter a pattern number from 1 to 2: "))
+p = int(input("Enter a pattern number from 1 to 8: "))
 n = int(input("Enter number of rows: "))
 
 # Problem 1: Function to print a solid square pattern of asterisks
