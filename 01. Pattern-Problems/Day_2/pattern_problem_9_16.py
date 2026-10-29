@@ -42,9 +42,31 @@ def pattern10(n):
         k-=2
     pattern09(n)
 
+
+# Problem 11: Function to print a sequential number triangle
+# Example for num = 5:
+# 1
+# 23
+# 456
+# 78910
+# 1112131415
+def pattern11(n):
+    k = 1
+    for i in range(1, n+1):
+        for j in range(1,i+1):
+            print(k, end = '')
+            k+=1
+        print()
+
+
+
+
+
 patterns = {
     9: pattern09,
-    10: pattern10
+    10: pattern10,
+    11: pattern11,
+    12: pattern12
 }
 
 # Execute selected pattern
