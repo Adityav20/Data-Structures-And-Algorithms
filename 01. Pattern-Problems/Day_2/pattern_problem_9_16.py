@@ -20,8 +20,31 @@ def pattern09(n):
         print()
 
 
+# Problem 10: Function to print a diamond pattern
+# Example for num = 5:
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+def pattern10(n):
+    k = n
+    for i in range(1, n+1):
+        print(' ' * (i+k-2), end = '')
+        print('*' * (i-1), end = '')
+        for j in range(i):
+            print('*', end = '')
+        print()
+        k-=2
+    pattern09(n)
+
 patterns = {
-    9: pattern09
+    9: pattern09,
+    10: pattern10
 }
 
 # Execute selected pattern
