@@ -125,6 +125,22 @@ def pattern15(n):
         print()
 
 
+# Problem 16: Function to print a hollow square
+# Example for num = 5:
+# *****
+# *   *
+# *   *
+# *   *
+# *****
+def pattern16(n):
+    for i in range(n):
+        for j in range(n):
+            if i==0 or j==0 or i==n-1 or j==n-1:
+                print('*', end = '')
+            else:
+                print(' ', end = '')
+        print()
+
 patterns = {
     9: pattern09,
     10: pattern10,
@@ -132,7 +148,8 @@ patterns = {
     12: pattern12,
     13: pattern13,
     14: pattern14,
-    15: pattern15
+    15: pattern15,
+    16: pattern16
 }
 
 # Execute selected pattern
