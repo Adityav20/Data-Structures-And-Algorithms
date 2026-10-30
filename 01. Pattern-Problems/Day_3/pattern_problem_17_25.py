@@ -92,11 +92,35 @@ def pattern20(n):
         print()
 
 
+# Problem 21: Function to print a butterfly pattern
+# Example for num = 5:
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+def pattern21(n):
+    for i in range(1, n+1):
+        print('*' * i, end = '')
+        print(' ' * (2*(n-i)), end = '')
+        print('*' * i)
+
+    for i in range(n-1, 0, -1):
+        print('*' * i, end = '')
+        print(' ' * (2*(n-i)), end = '')
+        print('*' * i)
+
+
 patterns = {
     17: pattern17,
     18: pattern18,
     19: pattern19,
-    20: pattern20
+    20: pattern20,
+    21: pattern21
 }
 
 patterns[p](n)
