@@ -1,5 +1,5 @@
 #A desired pattern number from USER
-p = int(input("Enter a pattern number from 17 to 25: "))
+p = int(input("Enter a pattern number from 17 to 24: "))
 n = int(input("Enter number of rows: "))
 
 
@@ -165,6 +165,64 @@ def pattern23(n):
         print()
 
 
+# Problem 25: Function to print a spiral number pattern
+# Example for num = 5:
+#  1  2  3  4  5
+# 16 17 18 19  6
+# 15 24 25 20  7
+# 14 23 22 21  8
+# 13 12 11 10  9
+def pattern24(n):
+    matrix = [[0] * n for _ in range(n)]
+
+    top = 0
+    bottom = n - 1
+    left = 0
+    right = n - 1
+
+    num = 1
+
+    while top <= bottom and left <= right:
+
+        # 1. Left to Right
+        for j in range(left, right + 1):
+            matrix[top][j] = num
+            num += 1
+
+        top += 1
+
+        # 2. Top to Bottom
+        for i in range(top, bottom + 1):
+            matrix[i][right] = num
+            num += 1
+
+        right -= 1
+
+        # 3. Right to Left
+        if top <= bottom:
+            for j in range(right, left - 1, -1):
+                matrix[bottom][j] = num
+                num += 1
+
+            bottom -= 1
+
+        # 4. Bottom to Top
+        if left <= right:
+            for i in range(bottom, top - 1, -1):
+                matrix[i][left] = num
+                num += 1
+
+            left += 1
+
+    # Print matrix
+    width = len(str(n * n))
+
+    for row in matrix:
+        for value in row:
+            print(f"{value:{width}d}", end=" ")
+        print()
+
+
 patterns = {
     17: pattern17,
     18: pattern18,
@@ -172,7 +230,8 @@ patterns = {
     20: pattern20,
     21: pattern21,
     22: pattern22,
-    23: pattern23
+    23: pattern23,
+    24: pattern24
 }
 
 patterns[p](n)
