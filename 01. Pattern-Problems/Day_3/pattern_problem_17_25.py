@@ -144,13 +144,35 @@ def pattern22(n):
         print()    
 
 
+# Problem 23: Function to print Pascal's triangle
+# Example for num = 5:
+#         1
+#       1   1
+#     1   2   1
+#   1   3   3   1
+# 1   4   6   4   1
+def pattern23(n):
+    for i in range(n):
+        # Leading spaces
+        print(' ' * (2 * (n - i - 1)), end='')
+
+        num = 1
+
+        for j in range(i + 1):
+            print(num, end='   ' if j < i else '')
+            num = num * (i - j) // (j + 1) #Pascal formula
+
+        print()
+
+
 patterns = {
     17: pattern17,
     18: pattern18,
     19: pattern19,
     20: pattern20,
     21: pattern21,
-    22: pattern22
+    22: pattern22,
+    23: pattern23
 }
 
 patterns[p](n)
