@@ -111,14 +111,11 @@ def pattern07(n):
 #  *******
 # *********
 def pattern08(n):
-    k = n
     for i in range(1, n+1):
-        print(' ' * (i+k-2), end = '')
-        print('*' * (i-1), end = '')
-        for j in range(i):
+        print(' ' * (n - i), end = '')
+        for j in range(2 * i - 1):
             print('*', end = '')
         print()
-        k-=2
 
 
 patterns = {
