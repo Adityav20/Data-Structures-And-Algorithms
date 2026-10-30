@@ -40,6 +40,40 @@ def pattern18(n):
         print()
 
 
+# Problem 19: Function to print a hollow diamond
+# Example for num = 5:
+#     *
+#    * *
+#   *   *
+#  *     *
+# *       *
+#  *     *
+#   *   *
+#    * *
+#     *
+def pattern19(n):
+    for i in range(1, n):
+        # Leading spaces
+        print(' ' * (n - i), end='')
+        # Print stars and inner spaces
+        for j in range(2 * i - 1):
+            if j==0 or j==2*i-2:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()
+    
+    for i in range(n, 0, -1):
+        # Leading spaces
+        print(' ' * (n - i), end='')
+        # Print stars and inner spaces
+        for j in range(2 * i - 1):
+            if j==0 or j==2*i-2:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()
+
 
 patterns = {
     17: pattern17,
