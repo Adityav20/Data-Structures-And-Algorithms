@@ -75,10 +75,28 @@ def pattern19(n):
         print()
 
 
+# Problem 20: Function to print an X pattern
+# Example for num = 5:
+# *   *
+#  * *
+#   *
+#  * *
+# *   *
+def pattern20(n):
+    for i in range(n):
+        for j in range(n):
+            if j==i or j==(n-i-1):
+                print('*', end = '')
+            else:
+                print(' ', end = '')
+        print()
+
+
 patterns = {
     17: pattern17,
     18: pattern18,
-    19: pattern19
+    19: pattern19,
+    20: pattern20
 }
 
 patterns[p](n)
