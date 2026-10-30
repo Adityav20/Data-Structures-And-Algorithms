@@ -115,12 +115,42 @@ def pattern21(n):
         print('*' * i)
 
 
+# Problem 22: Function to print an hourglass pattern
+# Example for num = 5:
+# *********
+#  *******
+#   *****
+#    ***
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+def pattern22(n):
+    k = n
+    for i in range(n,0,-1):
+        print(' ' * (k-i), end = '')
+        print('*'* (i-1), end = '')
+        for j in range(i):
+            print('*', end = '')
+        print()
+
+    k = n
+    for i in range(2,n+1):
+        print(' ' * (k-i), end = '')
+        print('*'* (i-1), end = '')
+        for j in range(i):
+            print('*', end = '')
+        print()    
+
+
 patterns = {
     17: pattern17,
     18: pattern18,
     19: pattern19,
     20: pattern20,
-    21: pattern21
+    21: pattern21,
+    22: pattern22
 }
 
 patterns[p](n)
