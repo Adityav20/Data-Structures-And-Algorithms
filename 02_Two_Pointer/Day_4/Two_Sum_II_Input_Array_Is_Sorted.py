@@ -22,3 +22,22 @@ Input: numbers = [2,3,4], target = 6
 Output: [1,3]
 Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
 """
+
+def twoSum(numbers: list[int], target: int) -> list[int]:
+    i = 0
+    j = len(numbers)-1
+    while i<j:
+        sum = numbers[i] + numbers[j]
+        if sum==target:
+            return [i+1,j+1]
+        if sum>target:
+            j-=1
+        if sum<target:
+            i+=1
+    return None
+
+arr1 = [2,7,11,15]
+arr2 = [2,3,4]
+
+print(twoSum(arr1,9))
+print(twoSum(arr2,6))
