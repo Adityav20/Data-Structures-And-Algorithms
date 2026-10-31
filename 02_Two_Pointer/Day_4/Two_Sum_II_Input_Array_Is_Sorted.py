@@ -41,3 +41,14 @@ arr2 = [2,3,4]
 
 print(twoSum(arr1,9))
 print(twoSum(arr2,6))
+
+"""
+This algo will only work when the array is sorted.
+But when the array is not sorted than we will apply different algo
+
+Why?
+Because manually sorting the array will change the index.
+
+If question asked to give the int rather than the position(index),
+then above solution can also be applied
+"""
