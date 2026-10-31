@@ -42,6 +42,9 @@ arr2 = [2,3,4]
 print(twoSum(arr1,9))
 print(twoSum(arr2,6))
 
+#Time Complexity = O(n)
+#Space Complexity = O(1)
+
 """
 This algo will only work when the array is sorted.
 But when the array is not sorted than we will apply different algo
