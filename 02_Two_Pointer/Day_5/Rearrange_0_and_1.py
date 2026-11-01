@@ -15,4 +15,21 @@ Output: [1, 1]
 Explanation: There are no 0s in the given array, so the modified array is [1, 1]
 """
 
+def segregate0and1(arr):
+    left = 0
+
+    for right in range(len(arr)):
+        if arr[right] == 0:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+
+    return arr
+
+
+arr1 = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]    
+arr2 = [1,1]
+
+print(segregate0and1(arr1))
+print(segregate0and1(arr2))
+
 
