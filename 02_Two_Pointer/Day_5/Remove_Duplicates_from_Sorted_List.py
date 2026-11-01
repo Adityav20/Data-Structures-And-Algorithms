@@ -36,3 +36,5 @@ head2 = [1,1,2,3,3]
 print(deleteDuplicates(head1))
 print(deleteDuplicates(head2))
 
+#Time Complexity = O(n)
+#Space Complexity = O(1)
