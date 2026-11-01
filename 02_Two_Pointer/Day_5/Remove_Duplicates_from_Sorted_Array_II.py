@@ -45,3 +45,6 @@ k2 = deleteDuplicates(nums2)
 
 print(k1, nums1[:k1])
 print(k2, nums2[:k2])
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
