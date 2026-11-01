@@ -32,4 +32,5 @@ arr2 = [1,1]
 print(segregate0and1(arr1))
 print(segregate0and1(arr2))
 
-
+#Time Complexity = O(n)
+#Space Complexity = O(1)
