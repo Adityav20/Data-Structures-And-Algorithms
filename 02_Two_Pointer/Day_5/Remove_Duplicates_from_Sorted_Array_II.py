@@ -23,3 +23,25 @@ Explanation: Your function should return k = 7, with the first seven elements of
 It does not matter what you leave beyond the returned k (hence they are underscores).
 """
 
+def deleteDuplicates(nums):
+    if len(nums) <= 2:
+        return len(nums)
+
+    i = 2
+
+    for j in range(2, len(nums)):
+        if nums[j] != nums[i-2]:
+            nums[i] = nums[j]
+            i += 1
+
+    return i
+
+
+nums1 = [1, 1, 1, 2, 2, 3]
+nums2 = [0, 0, 1, 1, 1, 1, 2, 3, 3]
+
+k1 = deleteDuplicates(nums1)
+k2 = deleteDuplicates(nums2)
+
+print(k1, nums1[:k1])
+print(k2, nums2[:k2])
