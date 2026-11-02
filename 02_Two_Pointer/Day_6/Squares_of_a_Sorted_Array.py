@@ -35,3 +35,5 @@ nums2 = [-7,-3,2,3,11]
 print(sortedSquares(nums1))
 print(sortedSquares(nums2))
 
+#Time Complexity = O(n)
+#Space Complexity = O(n)
