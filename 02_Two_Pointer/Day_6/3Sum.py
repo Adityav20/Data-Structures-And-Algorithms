@@ -28,3 +28,30 @@ Output: [[0,0,0]]
 Explanation: The only possible triplet sums up to 0.
 """
 
+def threeSum(nums):
+    s = set()
+    nums.sort()
+    for i in range(len(nums)):
+        j = i + 1
+        k = len(nums) - 1
+        while j < k:
+            sum = nums[i] + nums[j] + nums[k]
+            if sum == 0:
+                s.add((nums[i], nums[j], nums[k]))
+                j += 1
+                k -= 1
+            elif sum < 0:
+                j += 1
+            else:
+                k -= 1
+
+    ans = list(s)
+    return ans
+
+nums1 = [-1,0,1,2,-1,-4]
+nums2 = [0,1,1]
+nums3 = [0,0,0]
+
+print(threeSum(nums1))
+print(threeSum(nums2))
+print(threeSum(nums3))
