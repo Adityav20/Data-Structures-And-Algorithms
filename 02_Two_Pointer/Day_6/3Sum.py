@@ -55,3 +55,6 @@ nums3 = [0,0,0]
 print(threeSum(nums1))
 print(threeSum(nums2))
 print(threeSum(nums3))
+
+#Time Complexity = O(n^2)
+#Space Complexity = O(n)
