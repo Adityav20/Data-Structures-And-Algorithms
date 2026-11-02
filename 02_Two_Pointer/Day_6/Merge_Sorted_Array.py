@@ -56,3 +56,6 @@ nums2b = []
 
 print(merge(nums1a,nums2a))
 print(merge(nums1b,nums2b))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
