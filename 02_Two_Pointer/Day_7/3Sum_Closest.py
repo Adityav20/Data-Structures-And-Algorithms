@@ -20,3 +20,34 @@ Input: nums = [0,0,0], target = 1
 Output: 0
 Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0).
 """
+
+def threeSumClosest(nums, target):
+    nums.sort()
+    result = nums[0] + nums[1] + nums[2]
+
+    for i in range(len(nums) - 2):
+        left, right = i + 1, len(nums) - 1
+
+        while left < right:
+            total = nums[i] + nums[left] + nums[right]
+
+            if abs(target - total) < abs(target - result):
+                result = total
+
+            if total == target:
+                return target
+            elif total < target:
+                left += 1
+            else:
+                right -= 1
+
+        return result
+
+nums1 = [-1,2,1,-4] 
+target1 = 1
+
+nums2 = [0,0,0]
+target2 = 1
+
+print(threeSumClosest(nums1,target1))
+print(threeSumClosest(nums2,target2))
