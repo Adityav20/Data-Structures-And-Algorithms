@@ -14,3 +14,31 @@ Input: sum = 12, arr[] = [5, 1, 3, 4, 7]
 Output: 4
 Explanation: Triplets with sum less than 12 are (1, 3, 4), (5, 1, 3), (1, 3, 7) and (5, 1, 4).
 """
+
+def countTriplets(sum, arr):
+    arr.sort()
+    ans = 0
+    closest_sum = arr[0] + arr[1] + arr[2]
+    n = len(arr)
+    for i in range(n-2):
+        left, right = i+1, n-1
+        while(left<right):
+            s = arr[i] + arr[left] + arr[right]
+            if abs(s - sum) < abs(closest_sum - sum):
+                closest_sum = s
+            if s >= sum:
+                right = right-1
+            else:
+                ans = ans + (right-left)
+                left = left+1
+    return ans
+
+nums1 = [-2, 0, 1, 3] 
+sum1 = 2
+
+nums2 = [5, 1, 3, 4, 7]
+sum2 = 12
+
+print(countTriplets(sum1, nums1))
+print(countTriplets(sum2, nums2))
+
