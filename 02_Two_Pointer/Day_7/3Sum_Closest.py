@@ -41,7 +41,7 @@ def threeSumClosest(nums, target):
             else:
                 right -= 1
 
-        return result
+    return result
 
 nums1 = [-1,2,1,-4] 
 target1 = 1
