@@ -42,3 +42,5 @@ sum2 = 12
 print(countTriplets(sum1, nums1))
 print(countTriplets(sum2, nums2))
 
+#Time complexity: O(n^2)
+#Space complexity: O(1)
