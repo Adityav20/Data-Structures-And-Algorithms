@@ -51,3 +51,6 @@ target2 = 1
 
 print(threeSumClosest(nums1,target1))
 print(threeSumClosest(nums2,target2))
+
+#Time complexity: O(n^2)
+#Space complexity: O(1)
