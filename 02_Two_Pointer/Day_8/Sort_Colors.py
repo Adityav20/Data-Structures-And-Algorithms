@@ -41,3 +41,6 @@ nums2 = [2,0,1]
 
 print(sortColors(nums1))
 print(sortColors(nums2))
+
+#Time complexity: O(n)
+#Space complexity: O(1)
