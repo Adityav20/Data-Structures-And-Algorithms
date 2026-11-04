@@ -51,6 +51,13 @@ def fourSum(nums, target):
 
     return [list(q) for q in sorted(s)]
 
-nums1 = [1,0,-1,0,-2,2], target1 = 0
-nums2 = [2,2,2,2,2], target2 = 8
+nums1 = [1,0,-1,0,-2,2] 
+target1 = 0
+nums2 = [2,2,2,2,2]
+target2 = 8
 
+print(fourSum(nums1, target1))
+print(fourSum(nums2, target2))
+
+#Time Complexity = O(n^3)
+#Space Complexity = O(n)
