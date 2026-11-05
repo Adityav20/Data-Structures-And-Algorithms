@@ -58,7 +58,7 @@ def hasCycle(head):
     return False
 
 
-head1 = createLinkedList([3, 2, 0, -4], 1)
+head1 = createLinkedList([3, 2, 0, -4],  1)
 head2 = createLinkedList([1, 2], 0)
 head3 = createLinkedList([1], -1)
 
