@@ -22,3 +22,45 @@ Output: no cycle
 Explanation: There is no cycle in the linked list.
 """
 
+def createLinkedList(arr, pos):
+    if not arr:
+        return None
+
+    nodes = [ListNode(x) for x in arr]
+
+    for i in range(len(nodes) - 1):
+        nodes[i].next = nodes[i + 1]
+
+    if pos != -1:
+        nodes[-1].next = nodes[pos]
+
+    return nodes[0]
+
+def hasCycle(head):
+    slow = fast = head
+
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+        if slow is fast:
+            break
+    else:
+        return None
+
+    fast = head
+
+    while fast is not slow:
+        fast = fast.next
+        slow = slow.next
+
+    return slow
+
+
+head1 = createLinkedList([3, 2, 0, -4], 1)
+head2 = createLinkedList([1, 2], 0)
+head3 = createLinkedList([1], -1)
+
+print(hasCycle(head1).val)
+print(hasCycle(head2).val)
+print(hasCycle(head3))
