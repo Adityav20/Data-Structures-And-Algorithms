@@ -64,3 +64,6 @@ head3 = createLinkedList([1], -1)
 print(hasCycle(head1).val)
 print(hasCycle(head2).val)
 print(hasCycle(head3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
