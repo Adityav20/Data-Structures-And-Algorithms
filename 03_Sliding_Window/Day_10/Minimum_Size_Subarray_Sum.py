@@ -18,7 +18,7 @@ Output: 0
 
 def minSubArrayLen(arr, k):
     sum = 0
-    low,high,length = 0, 0, 0
+    low,high = 0, 0
     res = float('inf')
     while high<len(arr):
         sum = sum + arr[high]
