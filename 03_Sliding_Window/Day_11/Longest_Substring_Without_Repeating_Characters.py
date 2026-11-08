@@ -49,3 +49,6 @@ s3 = "pwwkew"
 print(lengthOfLongestSubstring(s1))
 print(lengthOfLongestSubstring(s2))
 print(lengthOfLongestSubstring(s3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
