@@ -53,3 +53,5 @@ print(longestKSubstr(s1,k1))
 print(longestKSubstr(s2,k2))
 print(longestKSubstr(s3,k3))
 
+#Time Complexity = O(n)
+#Space Complexity = O(1)
