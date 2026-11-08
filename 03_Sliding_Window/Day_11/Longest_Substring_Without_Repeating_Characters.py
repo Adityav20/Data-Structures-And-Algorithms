@@ -18,4 +18,34 @@ Output: 3
 Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
+from collections import defaultdict
 
+def lengthOfLongestSubstring(s):
+    f = defaultdict(int)
+    low,high = 0, 0
+    res = 0
+    while(high<len(s)):
+        f[s[high]] += 1 #HashMap
+        k = high - low + 1
+        while(len(f)<k):
+            f[s[low]] -= 1
+            if f[s[low]] < 1: #del char from HP which has 0 count
+                del f[s[low]]
+            low += 1
+            k = high - low + 1
+        if len(f) == k:
+            length = high - low + 1
+            res = max(res, length)
+        high += 1
+
+    return res if res != 0 else -1
+
+s1 = "abcabcbb"
+
+s2 = "bbbbb"
+
+s3 = "pwwkew"
+
+print(lengthOfLongestSubstring(s1))
+print(lengthOfLongestSubstring(s2))
+print(lengthOfLongestSubstring(s3))
