@@ -20,6 +20,36 @@ Input: s = "aabaaab", k = 2
 Output: 7
 Explanation: The entire string "aabaaab" has exactly 2 unique characters 'a' and 'b', making it the longest valid substring.
 """
+from collections import defaultdict
 
+def longestKSubstr(s, k):
+    f = defaultdict(int)
+    low,high = 0, 0
+    res = 0
+    while(high<len(s)):
+        f[s[high]] += 1 #HashMap
+        while(len(f)>k):
+            f[s[low]] -= 1
+            if f[s[low]] < 1: #del char from HP which has 0 count
+                del f[s[low]]
+            low += 1
+        if len(f) == k:
+            length = high - low + 1
+            res = max(res, length)
+        high += 1
 
+    return res if res != 0 else -1
+
+s1 = "aabacbebebe"
+k1 = 3
+
+s2 = "aaaa"
+k2 = 2
+
+s3 = "aabaaab"
+k3 = 2
+
+print(longestKSubstr(s1,k1))
+print(longestKSubstr(s2,k2))
+print(longestKSubstr(s3,k3))
 
