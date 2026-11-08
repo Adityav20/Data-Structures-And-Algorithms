@@ -55,5 +55,3 @@ print(totalFruit(fruits2))
 print(totalFruit(fruits3))
 print(totalFruit(fruits4))
 
-#Time Complexity = O(n)
-#Space Complexity = O(1)
