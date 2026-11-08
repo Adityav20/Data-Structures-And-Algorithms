@@ -39,9 +39,8 @@ def totalFruit(fruits):
             if f[fruits[low]] < 1: #del tree from HP which has 0 count
                 del f[fruits[low]]
             low += 1
-        if len(f) == 2:
-            length = high - low + 1
-            res = max(res, length)
+        length = high - low + 1
+        res = max(res, length)
         high += 1
 
     return res if res != 0 else -1
