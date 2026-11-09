@@ -49,3 +49,6 @@ k2 = 1
 
 print(characterReplacement(s1, k1))
 print(characterReplacement(s2, k2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
