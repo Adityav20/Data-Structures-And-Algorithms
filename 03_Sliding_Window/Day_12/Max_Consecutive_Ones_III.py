@@ -46,3 +46,6 @@ k2 = 3
 
 print(longestOnes(nums1, k1))
 print(longestOnes(nums2, k2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
