@@ -15,3 +15,30 @@ Example 3:
 Input: target = 11, nums = [1,1,1,1,1,1,1,1]
 Output: 0
 """
+def minSubArrayLen(target, nums):
+    sum = 0
+    low, high = 0, 0
+    res = float('inf')
+    while(high<len(nums)):
+        sum = sum + nums[high]
+        while(sum>=target):
+            length = high - low + 1
+            res = min(res,length)
+            sum = sum - nums[low]
+            low += 1
+        high += 1
+
+    return res if res != float('inf') else 0
+
+target1 = 7
+nums1 = [2,3,1,2,4,3]
+
+target2 = 4
+nums2 = [1,4,4]
+
+target3 = 11
+nums3 = [1,1,1,1,1,1,1,1]
+
+print(minSubArrayLen(target1, nums1))
+print(minSubArrayLen(target2, nums2))
+print(minSubArrayLen(target3, nums3))
