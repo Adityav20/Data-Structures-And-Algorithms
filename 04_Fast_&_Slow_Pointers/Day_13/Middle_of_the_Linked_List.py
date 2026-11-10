@@ -58,3 +58,6 @@ head2 = createLinkedList([1, 2, 3, 4, 5, 6])
 
 print(linkedListToList(middleNode(head1)))
 print(linkedListToList(middleNode(head2)))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
