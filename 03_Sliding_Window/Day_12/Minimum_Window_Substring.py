@@ -77,3 +77,6 @@ t3 = "aa"
 print(minWindow(s1, t1))
 print(minWindow(s2, t2))
 print(minWindow(s3, t3))
+
+#Time Complexity = O(n+m)
+#Space Complexity = O(1)
