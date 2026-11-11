@@ -19,11 +19,18 @@ Input: nums = [3,3,3,3,3]
 Output: 3
 """
 def findDuplicate(nums):
-    i,j = 0, 1
-    for i in range(len(nums)-1):
-        for j in range(i+1,len(nums)):
-            if nums[i] == nums[j]:
-                return nums[j]
+    slow, fast = 0, 0
+    for i in range(len(nums)):
+        slow = nums[slow]
+        fast = nums[fast]
+        fast = nums[fast]
+        while slow == fast:
+            slow = 0
+            while slow != fast:
+                slow = nums[slow]
+                fast = nums[fast]
+            return slow
+
 
 nums1 = [1,3,4,2,2]
 nums2 = [3,1,3,4,2]
