@@ -40,3 +40,5 @@ print(findDuplicate(nums1))
 print(findDuplicate(nums2))
 print(findDuplicate(nums3))
 
+#Time Complexity = O(n)
+#Space Complexity = O(1)
