@@ -18,3 +18,18 @@ Example 3:
 Input: nums = [3,3,3,3,3]
 Output: 3
 """
+def findDuplicate(nums):
+    i,j = 0, 1
+    for i in range(len(nums)-1):
+        for j in range(i+1,len(nums)):
+            if nums[i] == nums[j]:
+                return nums[j]
+
+nums1 = [1,3,4,2,2]
+nums2 = [3,1,3,4,2]
+nums3 = [3,3,3,3,3]
+
+print(findDuplicate(nums1))
+print(findDuplicate(nums2))
+print(findDuplicate(nums3))
+
