@@ -81,3 +81,6 @@ print(isPalindrome(head1))
 print(isPalindrome(head2))
 print(isPalindrome(head3))
 print(isPalindrome(head4))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
