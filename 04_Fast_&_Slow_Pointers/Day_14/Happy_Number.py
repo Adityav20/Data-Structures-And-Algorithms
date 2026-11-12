@@ -48,3 +48,5 @@ n2 = 2
 print(isHappy(n1))
 print(isHappy(n2))
 
+#Time Complexity = O(log n)
+#Space Complexity = O(1)
