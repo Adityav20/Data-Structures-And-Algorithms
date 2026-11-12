@@ -22,17 +22,29 @@ Example 2:
 Input: n = 2
 Output: false
 """
-def isHappy(n):
-    s = []
-    for i in range(256):
-        s[i] = sum(int(d) ** 2 for d in str(n))
-        if s[i] == 1:
-            return True
+def digitSum(n):
+    #return sum(int(i)**2 for i in str(n)) #Space: O(n)
+    sum = 0 #Space: O(1)
+    while n>0:
+        d = n%10
+        n = n // 10
+        sum = sum + d*d
+    return sum
 
-    return False
+def isHappy(n):
+    slow, fast = n, n
+    while fast != 1:
+        slow = digitSum(slow)
+        fast = digitSum(fast)
+        fast = digitSum(fast)
+        if slow == fast and slow != 1:
+            return False
+    
+    return True    
 
 n1 = 19
 n2 = 2
 
 print(isHappy(n1))
 print(isHappy(n2))
+
