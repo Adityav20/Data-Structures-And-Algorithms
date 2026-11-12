@@ -32,7 +32,7 @@ def createLinkedList(arr):
 
     return nodes[0]
 
-# Main Solution (Your original code)
+# Main Solution
 def middleNode(head):
     slow, fast = head, head
 
