@@ -22,3 +22,17 @@ Example 2:
 Input: n = 2
 Output: false
 """
+def isHappy(n):
+    s = []
+    for i in range(256):
+        s[i] = sum(int(d) ** 2 for d in str(n))
+        if s[i] == 1:
+            return True
+
+    return False
+
+n1 = 19
+n2 = 2
+
+print(isHappy(n1))
+print(isHappy(n2))
