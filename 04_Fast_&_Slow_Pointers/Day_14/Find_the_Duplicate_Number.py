@@ -23,7 +23,7 @@ def findDuplicate(nums):
     for i in range(len(nums)):
         slow = nums[slow]
         fast = nums[fast]
-        fast = nums[fast]
+        fast = nums[fast] #fast = nums[nums[fast]]
         while slow == fast:
             slow = 0
             while slow != fast:
