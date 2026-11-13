@@ -34,3 +34,6 @@ arr3 = [2, 6, 8, 1, 4]
 print(minSubarraySum(arr1))
 print(minSubarraySum(arr2))
 print(minSubarraySum(arr3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
