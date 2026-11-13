@@ -17,3 +17,20 @@ Input: nums = [5,4,-1,7,8]
 Output: 23
 Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 """
+def maxSubArray(nums):
+    bestending = nums[0]
+    ans = nums[0]
+    for i in range(1,len(nums)):
+        v1 = bestending + nums[i]
+        v2 = nums[i]
+        bestending = max(v1, v2)
+        ans = max(ans, bestending)
+    return ans
+
+nums1 = [-2,1,-3,4,-1,2,1,-5,4]
+nums2 = [1]
+nums3 = [5,4,-1,7,8]
+
+print(maxSubArray(nums1))
+print(maxSubArray(nums2))
+print(maxSubArray(nums3))
