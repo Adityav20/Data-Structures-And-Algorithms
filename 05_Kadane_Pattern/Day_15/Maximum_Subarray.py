@@ -34,3 +34,6 @@ nums3 = [5,4,-1,7,8]
 print(maxSubArray(nums1))
 print(maxSubArray(nums2))
 print(maxSubArray(nums3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
