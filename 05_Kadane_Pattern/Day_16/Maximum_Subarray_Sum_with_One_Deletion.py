@@ -43,3 +43,5 @@ print(maximumSum(arr1))
 print(maximumSum(arr2))
 print(maximumSum(arr3))
 
+#Time Complexity = O(n)
+#Space Complexity = O(1)
