@@ -22,22 +22,43 @@ Output: -2
 Explanation: Subarray [-2] has maximum sum -2.
 """
 def maxSubarraySumCircular(nums):
-    bestending = max(nums[0], nums[0] + nums[-1])
-    ans = max(nums[0], nums[0] + nums[-1])
-    for i in range(1,len(nums)-1):
+    bestending = nums[0]
+    minending = nums[0]
+    ans = nums[0]
+    minans = nums[0]
+    total = nums[0]
+
+    for i in range(1, len(nums)):
         v1 = bestending + nums[i]
         v2 = nums[i]
-        bestending = max(v1,v2)
+        v3 = minending + nums[i]
+
+        # Maximum subarray sum
+        bestending = max(nums[i], bestending + nums[i])
         ans = max(ans, bestending)
-    return ans
+
+        # Minimum subarray sum
+        minending = min(nums[i], minending + nums[i])
+        minans = min(minans, minending)
+
+        total += nums[i]
+        
+    # All negative numbers
+    if ans < 0:
+        return ans
+
+    return max(ans, total - minans)
 
 nums1 = [1,-2,3,-2]
 nums2 = [5,-3,5]
 nums3 = [-3,-2,-3]
 nums4 = [3,-1,2,-1]
+nums5 = [-2,2,-2,9]
 
 
 print(maxSubarraySumCircular(nums1))
 print(maxSubarraySumCircular(nums2))
 print(maxSubarraySumCircular(nums3))
 print(maxSubarraySumCircular(nums4))
+print(maxSubarraySumCircular(nums5))
+
