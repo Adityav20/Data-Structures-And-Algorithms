@@ -36,3 +36,6 @@ nums2 = [2,-5,1,-4,3,-2]
 
 print(maxAbsoluteSum(nums1))
 print(maxAbsoluteSum(nums2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
