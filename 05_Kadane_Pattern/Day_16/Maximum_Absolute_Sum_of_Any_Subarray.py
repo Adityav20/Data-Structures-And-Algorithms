@@ -18,3 +18,21 @@ Input: nums = [2,-5,1,-4,3,-2]
 Output: 8
 Explanation: The subarray [-5,1,-4] has absolute sum = abs(-5+1-4) = abs(-8) = 8.
 """
+def maxAbsoluteSum(nums):
+    maxending = nums[0]
+    minending = nums[0]
+    ans = abs(nums[0])
+    for i in range(1, len(nums)):
+        v1 = maxending + nums[i]
+        v2 = nums[i]
+        v3 = minending + nums[i]
+        maxending = max(v1, v2, v3)
+        minending = min(v1, v2, v3)
+        ans = max(abs(maxending), ans, abs(minending))
+    return ans
+
+nums1 = [1,-3,2,3,-4]
+nums2 = [2,-5,1,-4,3,-2]
+
+print(maxAbsoluteSum(nums1))
+print(maxAbsoluteSum(nums2))
