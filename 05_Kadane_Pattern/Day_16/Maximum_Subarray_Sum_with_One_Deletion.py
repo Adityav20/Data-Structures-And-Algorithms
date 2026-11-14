@@ -19,3 +19,27 @@ Input: arr = [-1,-1,-1,-1]
 Output: -1
 Explanation: The final subarray needs to be non-empty. You can't choose [-1] and delete -1 from it, then get an empty subarray to make the sum equals to 0.
 """
+def maximumSum(arr):
+    noDelete = arr[0]
+    oneDelete = float('-inf')
+    ans = arr[0]
+    for i in range(1, len(arr)):
+        prevNoDelete = noDelete
+        prevOneDelete = oneDelete
+        noDelete = max(noDelete+arr[i], arr[i])
+        if prevOneDelete == float('-inf'):
+            v2 = arr[i]
+        else:
+            v2 = prevOneDelete + arr[i]
+        oneDelete = max(v2, prevNoDelete)
+        ans = max(ans, noDelete, oneDelete)
+    return ans
+
+arr1 = [1,-2,0,3]
+arr2 = [1,-2,-2,3]
+arr3 = [-1,-1,-1,-1]
+
+print(maximumSum(arr1))
+print(maximumSum(arr2))
+print(maximumSum(arr3))
+
