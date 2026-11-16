@@ -33,3 +33,5 @@ print(runningSum(nums1))
 print(runningSum(nums2))
 print(runningSum(nums3))
         
+#Time Complexity = O(n)
+#Space Complexity = O(1)   
