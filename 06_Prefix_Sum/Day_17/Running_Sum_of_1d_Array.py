@@ -18,3 +18,18 @@ Example 3:
 Input: nums = [3,1,2,10,1]
 Output: [3,4,6,16,17]
 """
+def runningSum(nums):
+    sum = nums[0]
+    for i in range(1, len(nums)):
+        sum = sum + nums[i]
+        nums[i] = sum
+    return nums
+
+nums1 = [1,2,3,4]
+nums2 = [1,1,1,1,1]
+nums3 = [3,1,2,10,1]
+
+print(runningSum(nums1))
+print(runningSum(nums2))
+print(runningSum(nums3))
+        
