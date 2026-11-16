@@ -21,3 +21,27 @@ numArray.sumRange(0, 2); // return (-2) + 0 + 3 = 1
 numArray.sumRange(2, 5); // return 3 + (-5) + 2 + (-1) = -1
 numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
 """
+class NumArray:
+
+    def __init__(self, nums: list[int]):
+        self.nums = nums
+        self.sumNum = nums[0]
+
+        for i in range(1, len(nums)):
+            self.sumNum += nums[i]
+            nums[i] = self.sumNum
+
+    def sumRange(self, left: int, right: int) -> int:
+        if left == 0:
+            return self.nums[right]
+
+        return self.nums[right] - self.nums[left - 1]
+
+
+nums = [-2, 0, 3, -5, 2, -1]
+
+obj = NumArray(nums)
+
+print(obj.sumRange(0, 2))
+print(obj.sumRange(2, 5))
+print(obj.sumRange(0, 5))
