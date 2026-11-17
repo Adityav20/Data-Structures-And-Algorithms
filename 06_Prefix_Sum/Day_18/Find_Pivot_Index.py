@@ -30,3 +30,22 @@ The pivot index is 0.
 Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
 """
+def pivotIndex(nums):
+    prefix = [0]*len(nums)
+    suffix = [0]*len(nums)
+    for i in range(1, len(nums)):
+        prefix[i] = prefix[i-1] + nums[i-1]
+    for j in range(len(nums)-2,-1,-1):
+        suffix[j] = suffix[j+1] + nums[j+1]
+    for k in range(len(nums)):
+        if prefix[k] == suffix[k]:
+            return k
+    return -1
+
+nums1 = [1,7,3,6,5,6]
+nums2 = [1,2,3]
+nums3 = [2,1,-1]
+
+print(pivotIndex(nums1))
+print(pivotIndex(nums2))
+print(pivotIndex(nums3))
