@@ -31,7 +31,16 @@ Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
 """
 def pivotIndex(nums):
-    prefix = [0]*len(nums)
+    total = sum(nums)
+    leftSum = 0
+    for i in range(len(nums)):
+        rightSum = total - leftSum - nums[i]
+        if leftSum == rightSum:
+            return i
+        leftSum = leftSum + nums[i]
+    return -1 #Space O(1)
+
+'''    prefix = [0]*len(nums)
     suffix = [0]*len(nums)
     for i in range(1, len(nums)):
         prefix[i] = prefix[i-1] + nums[i-1]
@@ -41,6 +50,7 @@ def pivotIndex(nums):
         if prefix[k] == suffix[k]:
             return k
     return -1
+    Space: O(n)'''
 
 nums1 = [1,7,3,6,5,6]
 nums2 = [1,2,3]
@@ -51,4 +61,4 @@ print(pivotIndex(nums2))
 print(pivotIndex(nums3))
 
 #Time Complexity = O(n)
-#Space Complexity = O(n)
+#Space Complexity = O(1)
