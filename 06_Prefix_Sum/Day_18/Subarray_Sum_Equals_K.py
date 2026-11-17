@@ -41,3 +41,6 @@ k3 = 0
 print(subarraySum(nums1, k1))
 print(subarraySum(nums2, k2))
 print(subarraySum(nums3, k3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
