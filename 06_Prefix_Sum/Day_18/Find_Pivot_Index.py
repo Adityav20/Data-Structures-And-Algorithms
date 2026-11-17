@@ -49,3 +49,6 @@ nums3 = [2,1,-1]
 print(pivotIndex(nums1))
 print(pivotIndex(nums2))
 print(pivotIndex(nums3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
