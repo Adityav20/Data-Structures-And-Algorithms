@@ -14,3 +14,30 @@ Example 2:
 Input: nums = [5], k = 9
 Output: 0
 """
+from collections import defaultdict
+
+def subarraysDivByK(nums, k):
+    total = 0
+    ans = 0
+    f = defaultdict(int)
+    f[0] = 1  # Empty prefix sum
+
+    for i in range(len(nums)):
+        total = total + nums[i]
+        rem = total % k
+        if rem < 0:
+            rem = rem + k
+        ans += f[rem]
+        f[rem] += 1  # Update hashmap
+
+    return ans
+
+nums1 = [4,5,0,-2,-3,1]
+k1 = 5
+
+nums2 = [5]
+k2 = 9
+
+print(subarraysDivByK(nums1,k1))
+print(subarraysDivByK(nums2,k2))
+
