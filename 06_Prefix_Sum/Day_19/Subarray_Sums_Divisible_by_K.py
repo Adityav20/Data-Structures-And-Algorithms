@@ -41,3 +41,5 @@ k2 = 9
 print(subarraysDivByK(nums1,k1))
 print(subarraysDivByK(nums2,k2))
 
+#Time Complexity = O(n)
+#Space Complexity = O(n)
