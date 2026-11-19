@@ -50,3 +50,6 @@ nums3 = [0,1,1,1,1,1,0,0,0]
 print(findMaxLength(nums1))
 print(findMaxLength(nums2))
 print(findMaxLength(nums3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
