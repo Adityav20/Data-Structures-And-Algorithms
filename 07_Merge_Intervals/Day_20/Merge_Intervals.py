@@ -35,7 +35,7 @@ def merge(intervals):
             merged.append([start1, end1])
             start1 = start2
             end1 = end2
-    merged.append([start1, end1])
+    merged.append([start1, end1]) #To add last list 
 
     return merged
 
