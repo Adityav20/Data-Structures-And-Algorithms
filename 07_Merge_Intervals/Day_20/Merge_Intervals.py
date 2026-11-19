@@ -47,3 +47,6 @@ intervals3 = [[4,7],[1,4]]
 print(merge(intervals1))
 print(merge(intervals2))
 print(merge(intervals3))
+
+#Time Complexity = O(nlogn)
+#Space Complexity = O(n)
