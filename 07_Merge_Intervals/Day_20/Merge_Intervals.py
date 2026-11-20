@@ -31,14 +31,14 @@ def merge(intervals):
         start2, end2 = intervals[i][0], intervals[i][1]
         if end1 >= start2:  # Overlap
             end1 = max(end1, end2)
-            
+
         else:
             merged.append([start1, end1])
             start1 = start2
             end1 = end2
     merged.append([start1, end1]) #To add last list 
 
-    return merged
+
 
 
 intervals1 = [[1,3],[2,6],[8,10],[15,18]]
