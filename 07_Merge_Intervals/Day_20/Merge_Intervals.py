@@ -40,7 +40,6 @@ def merge(intervals):
 
     return merged
 
-
 intervals1 = [[1,3],[2,6],[8,10],[15,18]]
 intervals2 = [[1,4],[4,5]]
 intervals3 = [[4,7],[1,4]]
