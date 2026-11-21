@@ -22,7 +22,7 @@ def merge(intervals):
     if not intervals:
         return []
     
-    intervals.sort()  
+    intervals.sort()  #Sort by start time
     start1 = intervals[0][0]
     end1 = intervals[0][1]
     merged = []
