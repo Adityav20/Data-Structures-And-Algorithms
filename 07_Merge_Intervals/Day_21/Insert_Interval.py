@@ -20,12 +20,13 @@ Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 """
 def insert(intervals, newInterval):
-
+    #Adding the newInterval into intervals
     j = 0
     while j < len(intervals) and intervals[j][0] <= newInterval[0]:
         j += 1
     intervals.insert(j, newInterval)
 
+    #Merging
     start1, end1 = intervals[0][0], intervals[0][1]
     merged = []
     
