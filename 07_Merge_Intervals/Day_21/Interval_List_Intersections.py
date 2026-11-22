@@ -45,3 +45,6 @@ secondList2 = []
 
 print(intervalIntersection(firstList1, secondList1))
 print(intervalIntersection(firstList2, secondList2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(1)
