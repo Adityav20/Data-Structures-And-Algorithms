@@ -16,3 +16,32 @@ Example 2:
 Input: firstList = [[1,3],[5,9]], secondList = []
 Output: []
 """
+def intervalIntersection(firstList, secondList):
+    i, j = 0, 0
+    result = []
+
+    while i < len(firstList) and j < len(secondList):
+        start_a, end_a = firstList[i]
+        start_b, end_b = secondList[j]
+
+        # overlap of two closed intervals
+        lo, hi = max(start_a, start_b), min(end_a, end_b)
+        if lo <= hi:
+            result.append([lo, hi])
+
+        # the interval that ends first can't overlap anything further
+        if end_a < end_b:
+            i += 1
+        else:
+            j += 1
+
+    return result
+
+firstList1 = [[0,2],[5,10],[13,23],[24,25]]
+secondList1 = [[1,5],[8,12],[15,24],[25,26]]
+
+firstList2 = [[1,3],[5,9]]
+secondList2 = []
+
+print(intervalIntersection(firstList1, secondList1))
+print(intervalIntersection(firstList2, secondList2))
