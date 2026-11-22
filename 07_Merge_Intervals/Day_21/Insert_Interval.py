@@ -19,3 +19,34 @@ Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 """
+def insert(intervals, newInterval):
+
+    j = 0
+    while j < len(intervals) and intervals[j][0] <= newInterval[0]:
+        j += 1
+    intervals.insert(j, newInterval)
+
+    start1, end1 = intervals[0][0], intervals[0][1]
+    merged = []
+    
+    for i in range(1, len(intervals)):
+        start2, end2 = intervals[i][0], intervals[i][1]
+        if end1 >= start2:  # Overlap
+            end1 = max(end1, end2)
+
+        else:
+            merged.append([start1, end1])
+            start1 = start2
+            end1 = end2
+    merged.append([start1, end1]) #To add last list 
+
+    return merged
+
+intervals1 = [[1,3],[6,9]]
+newInterval1 = [2,5]
+
+intervals2 = [[1,2],[3,5],[6,7],[8,10],[12,16]]
+newInterval2 = [4,8]
+
+print(insert(intervals1, newInterval1))
+print(insert(intervals2, newInterval2))
