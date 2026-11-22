@@ -50,3 +50,6 @@ newInterval2 = [4,8]
 
 print(insert(intervals1, newInterval1))
 print(insert(intervals2, newInterval2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
