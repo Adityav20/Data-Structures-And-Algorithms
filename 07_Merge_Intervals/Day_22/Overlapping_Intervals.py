@@ -33,3 +33,5 @@ arr2 = [[1, 3], [7, 9], [4, 6], [10, 13]]
 print(isIntersect(arr1))
 print(isIntersect(arr2))
 
+#Time Complexity = O(nlogn)
+#Space Complexity = O(1)
