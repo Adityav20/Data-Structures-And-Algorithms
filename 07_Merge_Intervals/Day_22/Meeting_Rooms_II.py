@@ -41,3 +41,6 @@ end2 = [4, 12, 10]
 
 print(minMeetingRooms(start1,end1))
 print(minMeetingRooms(start2,end2))
+
+#Time Complexity = O(nlogn)
+#Space Complexity = O(1)
