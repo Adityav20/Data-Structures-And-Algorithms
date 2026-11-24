@@ -38,10 +38,12 @@ def isValid(s):
             return False
         if s[i] == ')' and st[-1] == '(':
             st.pop()
-        if s[i] == '}' and st[-1] == '{':
+        elif s[i] == '}' and st[-1] == '{':
             st.pop()
-        if s[i] == ']' and st[-1] == '[':
+        elif s[i] == ']' and st[-1] == '[':
             st.pop()
+        else:
+            return False
     if st:
         return False
     return True
@@ -50,7 +52,7 @@ s1 = "()"
 s2 = "()[]{}"
 s3 = "(]"
 s4 = "([])"
-s5 = "([)]"
+s5 = "(])"
 s6 = "[({})]"
 
 print(isValid(s1))
