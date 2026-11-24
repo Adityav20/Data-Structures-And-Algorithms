@@ -35,3 +35,6 @@ s2 = "azxxzy"
 
 print(removeDuplicates(s1))
 print(removeDuplicates(s2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
