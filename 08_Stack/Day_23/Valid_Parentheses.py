@@ -59,3 +59,6 @@ print(isValid(s3))
 print(isValid(s4))
 print(isValid(s5))
 print(isValid(s6))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
