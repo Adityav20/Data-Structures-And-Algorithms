@@ -16,3 +16,22 @@ Example 2:
 Input: s = "azxxzy"
 Output: "ay"
 """
+def removeDuplicates(s):
+    st = []
+    res = ""
+    for i in range(len(s)):
+        if not st:
+            st.append(s[i])
+            continue
+        if st[-1] == s[i]:
+            st.pop()
+            continue
+        st.append(s[i])
+
+    return "".join(st)
+
+s1 = "abbaca"
+s2 = "azxxzy"
+
+print(removeDuplicates(s1))
+print(removeDuplicates(s2))
