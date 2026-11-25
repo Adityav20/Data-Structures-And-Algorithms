@@ -18,7 +18,6 @@ Output: "ay"
 """
 def removeDuplicates(s):
     st = []
-    res = ""
     for i in range(len(s)):
         if not st:
             st.append(s[i])
