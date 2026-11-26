@@ -36,3 +36,6 @@ temperatures3 = [30,60,90]
 print(dailyTemperatures(temperatures1))
 print(dailyTemperatures(temperatures2))
 print(dailyTemperatures(temperatures3))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
