@@ -37,3 +37,6 @@ nums2 = [1,2,3,4,3]
 
 print(nextGreaterElements(nums1))
 print(nextGreaterElements(nums2))
+
+#Time Complexity = O(n)
+#Space Complexity = O(n)
