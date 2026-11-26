@@ -23,3 +23,33 @@ Example 3:
 Input: s = "pbbcggttciiippooaais", k = 2
 Output: "ps"
 """
+def removeDuplicates(s, k):
+    st = []
+
+    for i in range(len(s)):
+        c = s[i]
+        if not st:
+            st.append([c,1])
+            continue
+        if st[-1][0] != c:
+            st.append([c, 1])
+            continue
+        if st[-1][1] < k-1:
+            st[-1][1] += 1
+            continue
+        st.pop()
+
+    return "".join(ch * count for ch, count in st)
+
+s1 = "abcd"
+k1 = 2
+
+s2 = "deeedbbcccbdaa"
+k2 = 3
+
+s3 = "pbbcggttciiippooaais"
+k3 = 2
+
+print(removeDuplicates(s1, k1))
+print(removeDuplicates(s2, k2))
+print(removeDuplicates(s3, k3))
