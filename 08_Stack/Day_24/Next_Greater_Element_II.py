@@ -15,3 +15,25 @@ Example 2:
 Input: nums = [1,2,3,4,3]
 Output: [2,3,4,-1,4]
 """
+def nextGreaterElements(nums):
+    st = []
+    n = len(nums)
+    res = [-1]*n
+    for j in range(n-2,-1,-1): #Adding all the elements beforehand for CIRCULAR
+        st.append(nums[j])
+    
+    for i in range(n-1,-1,-1): #Normal traverse
+        while st and st[-1] <= nums[i]:
+            st.pop()
+        if not st:
+            res[i] = -1
+        else:
+            res[i] = st[-1]
+        st.append(nums[i])
+    return res
+
+nums1 = [1,2,1]
+nums2 = [1,2,3,4,3]
+
+print(nextGreaterElements(nums1))
+print(nextGreaterElements(nums2))
